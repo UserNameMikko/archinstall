@@ -4,4 +4,5 @@ Installation of Arch Linux
 Run in the console 
 `curl -OL https://raw.githubusercontent.com/UserNameMikko/archinstall/master/arch1.sh && sh arch1.sh`
 and follow the prompts
-link for proprietary drivers https://github.com/lutris/docs/blob/master/InstallingDrivers.md
+
+###link for proprietary drivers https://github.com/lutris/docs/blob/master/InstallingDrivers.md
