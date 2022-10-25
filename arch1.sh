@@ -2,10 +2,10 @@
 
 loadkeys ru
 setfont cyr-sun16
-echo '2.3 Синхронизация системных часов'
+echo 'Синхронизация системных часов'
 timedatectl set-ntp true
 
-echo '2.4 создание разделов'
+echo 'создание разделов'
 (
   echo o;
 #boot
@@ -38,10 +38,10 @@ echo '2.4 создание разделов'
   echo w;
 ) | fdisk /dev/sda
 
-echo 'Ваша разметка диска'
+echo 'разметка диска'
 fdisk -l
 
-echo '2.4.2 Форматирование дисков'
+echo 'Форматирование дисков'
 mkfs.ext2  /dev/sda1 -L boot
 mkfs.ext4  /dev/sda2 -L root
 mkswap /dev/sda3 -L swap
