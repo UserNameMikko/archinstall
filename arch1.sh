@@ -113,9 +113,9 @@ echo 'now:'
 fdisk -l
 echo "if you need to set up mirror from yandex"
 read -p "press 1: " mirr
-if [[$mirr == 1]]; then
+if [[ $mirr == 1 ]]; then
   echo "Server = http://mirror.yandex.ru/archlinux/\$repo/os/\$arch" > /etc/pacman.d/mirrorlist
-elif [[$mirr != 1]]; then
+elif [[ $mirr != 1 ]]; then
   echo "setting up of mirror skipped"
 fi
 
