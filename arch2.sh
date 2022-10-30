@@ -98,7 +98,7 @@ pacman -S reflector firefox firefox-i18n-ru ufw f2fs-tools dosfstools ntfs-3g al
 read -p "if you need i3 press 1" i_three
 if [[ $i_three == 1 ]]; then
   pacman -S i3-gaps polybar dmenu pcmanfm xterm ttf-font-awesome feh gvfs udiskie ristretto tumbler picom jq --noconfirm
-elif [[ $i_three != 1 ]]
+elif [[ $i_three != 1 ]]; then
   echo "i3 installation skipped"
 fi
 
