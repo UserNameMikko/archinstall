@@ -2,7 +2,7 @@
 
 loadkeys ru
 setfont cyr-sun16
-echo 'Синхронизация системных часов'
+echo 'Synchromizing of system clock'
 timedatectl set-ntp true
 
 
