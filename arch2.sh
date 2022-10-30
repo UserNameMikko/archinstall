@@ -7,7 +7,7 @@ echo $hostname > /etc/hostname
 ln -svf /usr/share/zoneinfo/Europe/Moscow  /etc/localtime
 
 echo 'Choose a system language'
-read -p "1 - en  2 - ru (include ru and en_US locale)  3 - de (include de and en_US locale): "lang_num
+read -p "1 - en  2 - ru (include ru and en_US locale)  3 - de (include de and en_US locale): " lang_num
 if [[ $lang_num == 1 ]]; then
   echo 'LANG="en_US.UTF-8"' > /etc/locale.conf
   echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
@@ -72,7 +72,7 @@ echo 'installing of xorg and drivers'
 pacman -S $gui_install
 
 echo"Choose Desktop Environment"
-read -p"1 - KDE and sddm 2 - xfce and lxdm 3 - GNOME and gdm"de_dm
+read -p "1 - KDE and sddm 2 - xfce and lxdm 3 - GNOME and gdm" de_dm
 if [[$de_dm == 1]]; then
   echo 'installing of KDE...'
   pacman -S plasma plasma-wayland-session kde-applications sddm --noconfirm
@@ -110,7 +110,7 @@ echo 'setting up autoloading the login manager and internet'
 systemctl enable NetworkManager
 
 echo 'Installation complete! Please reboot the system.'
-read -p 'input "1" for reboot' is_reboot
+read -p "input "1" for reboot" is_reboot
 
 if [[ $is_reboot == 1 ]]; then
   echo '###########################################'
@@ -119,5 +119,7 @@ if [[ $is_reboot == 1 ]]; then
   echo '###########################################'
   echo '###########################################'
 	reboot
+elif [[$is_reboot != 1]]; then
+  echo "reboot"
 fi
 exit
