@@ -72,7 +72,7 @@ echo 'installing of xorg and drivers'
 pacman -S $gui_install
 
 echo"Choose Desktop Environment"
-read -p "1 - KDE and sddm 2 - xfce and lxdm 3 - GNOME and gdm" de_dm
+read -p "1 - KDE and sddm 2 - xfce and lxdm 3 - GNOME and gdm: " de_dm
 if [[ $de_dm == 1 ]]; then
   echo 'installing of KDE...'
   pacman -S plasma plasma-wayland-session kde-applications sddm --noconfirm
@@ -95,7 +95,7 @@ pacman -S ttf-liberation ttf-dejavu --noconfirm
 echo 'installing of base programs and packages...'
 pacman -S reflector firefox firefox-i18n-ru ufw f2fs-tools dosfstools ntfs-3g alsa-lib alsa-utils file-roller p7zip unrar gvfs aspell-ru pulseaudio pavucontrol --noconfirm
 
-read -p "if you need i3 press 1" i_three
+read -p "if you need i3 press 1: " i_three
 if [[ $i_three == 1 ]]; then
   pacman -S i3-gaps polybar dmenu pcmanfm xterm ttf-font-awesome feh gvfs udiskie ristretto tumbler picom jq --noconfirm
 elif [[ $i_three != 1 ]]; then
@@ -110,16 +110,10 @@ echo 'setting up autoloading the login manager and internet'
 systemctl enable NetworkManager
 
 echo 'Installation complete! Please reboot the system.'
-read -p "input 1 for reboot" is_reboot
 
-if [[ $is_reboot == 1 ]]; then
-  echo '###########################################'
-  echo '###########################################'
-  echo '###############| THE END |#################'
-  echo '###########################################'
-  echo '###########################################'
-	reboot
-elif [[ $is_reboot != 1 ]]; then
-  echo "reboot"
-fi
+echo '###########################################'
+echo '###########################################'
+echo '###############| THE END |#################'
+echo '###########################################'
+echo '###########################################'
 exit
