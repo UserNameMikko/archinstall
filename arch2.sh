@@ -36,7 +36,7 @@ pacman -Syy
 pacman -S grub --noconfirm 
 grub-install /dev/sda
 
-echo 'updating grub.cfg'
+echo 'updating grub.cfg...'
 grub-mkconfig -o /boot/grub/grub.cfg
 
 echo 'addind soft for Wi-fi...'
@@ -103,10 +103,10 @@ elif [[ $i_three != 1 ]]; then
 fi
 
     
-echo 'setting up the network'
+echo 'setting up the network..'
 pacman -S networkmanager network-manager-applet ppp --noconfirm
 
-echo 'setting up autoloading the login manager and internet'
+echo 'setting up autoloading the login manager and internet...'
 systemctl enable NetworkManager
 
 echo 'Installation complete! Please reboot the system.'
