@@ -95,7 +95,7 @@ pacman -S ttf-liberation ttf-dejavu --noconfirm
 echo 'installing of base programs and packages...'
 pacman -S reflector firefox firefox-i18n-ru ufw f2fs-tools dosfstools ntfs-3g alsa-lib alsa-utils file-roller p7zip unrar gvfs aspell-ru pulseaudio pavucontrol --noconfirm
 
-read "if you need i3 press 1" i_three
+read -p "if you need i3 press 1" i_three
 if [[ $i_three == 1 ]]; then
   pacman -S i3-gaps polybar dmenu pcmanfm xterm ttf-font-awesome feh gvfs udiskie ristretto tumbler picom jq --noconfirm
 elif [[ $i_three != 1 ]]
