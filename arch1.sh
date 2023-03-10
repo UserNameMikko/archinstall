@@ -104,7 +104,6 @@ elif [[ $cfdisk == 0 ]]; then
   read -p "select swap partition (for example: sda3):" swaps
   swapon /dev/$swaps
   ########### home ########### 
-  clear
   read -p "select home partition(for example: sda4):" home
   mount /dev/$home /mnt/home
 fi

@@ -71,7 +71,7 @@ fi
 echo 'installing of xorg and drivers'
 pacman -S $gui_install
 
-echo"Choose Desktop Environment"
+echo "Choose Desktop Environment"
 read -p "1 - KDE and sddm 2 - xfce and lxdm 3 - GNOME and gdm: " de_dm
 if [[ $de_dm == 1 ]]; then
   echo 'installing of KDE...'
